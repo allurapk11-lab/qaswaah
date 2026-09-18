@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrical Department - Qaswa</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f6f1f1;
+            color: #0a0909;
+            padding: 40px 20px;
+        }
+
+        .department-page {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #f8f5f5;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 15px 35px rgba(250, 250, 250, 0.5);
+            padding: 50px;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 30px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            color: #0a0909;
+        }
+
+        .dept-header {
+            margin-bottom: 40px;
+        }
+
+        .dept-header h1 {
+            font-size: 32px;
+            font-weight: 800;
+            color: #d4af37;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .dept-header h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #aaaaaa;
+        }
+
+        .dept-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .dept-info p {
+            font-size: 14px;
+            color: #0a0909;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        /* Services List */
+        .services-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #d4af37;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            border-left: 4px solid #d4af37;
+            padding-left: 12px;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #fbf7f7;
+            padding: 12px 18px;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            border: 1px solid rgb(250, 245, 245);
+            transition: 0.3s;
+        }
+
+        .service-item:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            transform: translateX(5px);
+        }
+
+        .service-item i {
+            color: #d4af37;
+            font-size: 18px;
+            width: 25px;
+            text-align: center;
+        }
+
+        .service-text h4 {
+            font-size: 14px;
+            color: #0e0d0d;
+            font-weight: 600;
+        }
+
+        .service-text span {
+            font-size: 12px;
+            color: #888888;
+        }
+
+        /* Right Side Images */
+        .dept-images {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .dept-img-box {
+            height: 220px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .dept-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        @media(max-width: 900px) {
+            .dept-grid {
+                grid-template-columns: 1fr;
+            }
+            .department-page {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="department-page">
+        <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+        
+        <div class="dept-header">
+            <h1>Electrical Department</h1>
+            <h2>القسم الكهربائي</h2>
+        </div>
+
+        <div class="dept-grid">
+            <!-- Left Info & Services -->
+            <div class="dept-info">
+                <p>
+                    Our Electrical Department delivers comprehensive electrical solutions for industrial, commercial and infrastructure projects. We have the expertise, resources and experience to handle projects of any scale with safety, quality and reliability.
+                </p>
+                <p>
+                    We are committed to providing efficient and innovative electrical systems that meet international standards and client requirements.
+                </p>
+
+                <h3 class="services-title">Our Electrical Services</h3>
+
+                <div class="service-item">
+                    <i class="fa-solid fa-bolt"></i>
+                    <div class="service-text">
+                        <h4>Power Distribution Systems</h4>
+                        <span>أنظمة توزيع الطاقة</span>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <i class="fa-solid fa-plug"></i>
+                    <div class="service-text">
+                        <h4>Electrical Installations</h4>
+                        <span>التمديدات الكهربائية</span>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <i class="fa-solid fa-sliders"></i>
+                    <div class="service-text">
+                        <h4>Control & Instrumentation</h4>
+                        <span>أنظمة التحكم والقياس</span>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <div class="service-text">
+                        <h4>Lighting Systems</h4>
+                        <span>أنظمة الإضاءة</span>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <i class="fa-solid fa-tower-broadcast"></i>
+                    <div class="service-text">
+                        <h4>Earthing & Lightning Protection</h4>
+                        <span>التأريض والحماية من الصواعق</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Images Stack -->
+            <div class="dept-images">
+                <div class="dept-img-box">
+                    <img src="po12.jpg" alt="Electrical Work 1">
+                </div>
+                <div class="dept-img-box">
+                    <img src="po13.jpg" alt="Electrical Work 2">
+                </div>
+                <div class="dept-img-box">
+                    <img src="po14.jpg" alt="Electrical Work 3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

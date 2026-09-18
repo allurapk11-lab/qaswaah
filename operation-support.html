@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operation & Support Services - Qaswah</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Navigation Bar */
+        .page-header {
+            background-color: #0b2240;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .brand-title {
+            font-size: 20px;
+            font-weight: 800;
+            color: #d4af37;
+            letter-spacing: 1px;
+        }
+
+        .back-btn {
+            background-color: #d4af37;
+            color: #0b2240;
+            padding: 8px 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #ffffff;
+        }
+
+        /* Main Content Container */
+        .content-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        /* Top Title & Banner Section */
+        .service-title-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .title-left h1 {
+            font-size: 28px;
+            color: #0b2240;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .title-left .subtitle-text {
+            font-size: 14px;
+            font-weight: bold;
+            color: #d4af37;
+            letter-spacing: 1px;
+        }
+
+        .title-right {
+            text-align: right;
+        }
+
+        .company-profile-badge {
+            background: #0b2240;
+            color: #d4af37;
+            padding: 6px 15px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        .arabic-sub {
+            font-size: 14px;
+            color: #666;
+            direction: rtl;
+        }
+
+        .service-banner-img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        .intro-text-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+            background: #fdfcf7;
+            padding: 20px;
+            border-left: 4px solid #d4af37;
+            border-radius: 4px;
+        }
+
+        .intro-text-box p {
+            font-size: 14px;
+            color: #444;
+            line-height: 1.7;
+        }
+
+        .intro-text-box .ar-text {
+            direction: rtl;
+            text-align: right;
+            color: #555;
+        }
+
+        /* Section Headings */
+        .section-heading {
+            background: #0b2240;
+            color: #ffffff;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Two Columns Grid for Operation & Support Services */
+        .grid-2col {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .card-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            gap: 15px;
+            transition: transform 0.3s;
+        }
+
+        .card-item:hover {
+            transform: translateY(-3px);
+            border-color: #d4af37;
+        }
+
+        .card-item img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            border-radius: 6px;
+            flex-shrink: 0;
+            background: #f9f9f9;
+            padding: 5px;
+        }
+
+        .card-content h4 {
+            font-size: 13px;
+            color: #0b2240;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .card-content p {
+            font-size: 11px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .card-content .ar-desc {
+            direction: rtl;
+            text-align: right;
+            margin-top: 3px;
+            color: #777;
+        }
+
+        /* Responsive Design */
+        @media(max-width: 992px) {
+            .grid-2col {
+                grid-template-columns: 1fr;
+            }
+            .intro-text-box {
+                grid-template-columns: 1fr;
+            }
+            .service-title-area {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .title-right {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Bar -->
+    <header class="page-header">
+        <div class="brand-title">QASWAH GENERAL CONTRACTING</div>
+        <a href="index.html" class="back-btn">← Back to Services</a>
+    </header>
+
+    <!-- Main Content Container -->
+    <div class="content-container">
+        
+        <!-- Top Title & Company Profile Tag -->
+        <div class="service-title-area">
+            <div class="title-left">
+                <h1>OPERATION & SUPPORT SERVICES</h1>
+                <div class="subtitle-text">خدمات التشغيل والدعم</div>
+            </div>
+            <div class="title-right">
+                <span class="company-profile-badge">COMPANY PROFILE / الملف التعريفي</span>
+                <p class="arabic-sub">مؤسسة قسوة للمقاولات العامة</p>
+            </div>
+        </div>
+
+        <!-- Banner Image -->
+        <img src="splash3.jpg" alt="Operation and Support Services" class="service-banner-img">
+
+        <!-- Intro Description Box (English & Arabic) -->
+        <div class="intro-text-box">
+            <p><strong>Overview:</strong> We provide comprehensive operation and support services to streamline business processes, optimize facility management, and ensure continuous operational continuity. Our dedicated expert teams deliver reliable backend and field support tailored to industrial and commercial requirements.</p>
+            <p class="ar-text">نقدم خدمات تشغيل ودعم متكاملة لتبسيط العمليات التجارية، وتحسين إدارة المرافق، وضمان استمرارية التشغيل دون انقطاع. توفر فرقنا المخصصة ذات الخبرة دعماً ميدانياً وخلفياً موثوقاً مصمم خصيصاً لتلبية المتطلبات الصناعية والتجارية.</p>
+        </div>
+
+        <!-- Section: Our Operation & Support Services -->
+        <div class="section-heading">OUR OPERATION & SUPPORT SERVICES / خدماتنا في التشغيل والدعم</div>
+
+        <div class="grid-2col">
+            
+            <!-- Service 1 -->
+            <div class="card-item">
+                <img src="splash3.jpg" alt="Facility Operation Management">
+                <div class="card-content">
+                    <h4>FACILITY OPERATION & MANAGEMENT</h4>
+                    <p>End-to-end management of building utilities, operations, and support infrastructure.</p>
+                    <p class="ar-desc">إدارة وتشغيل المرافق والبنية التحتية</p>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="card-item">
+                <img src="splash3.jpg" alt="Helpdesk and Technical Support">
+                <div class="card-content">
+                    <h4>HELPDESK & TECHNICAL SUPPORT</h4>
+                    <p>Responsive customer and technical helpdesk services to resolve issues swiftly.</p>
+                    <p class="ar-desc">مكتب المساعدة والدعم الفني</p>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="card-item">
+                <img src="splash3.jpg" alt="Logistics and Supply Chain Support">
+                <div class="card-content">
+                    <h4>LOGISTICS & SUPPLY CHAIN SUPPORT</h4>
+                    <p>Efficient handling of material transport, inventory tracking, and supply coordination.</p>
+                    <p class="ar-desc">دعم الخدمات اللوجستية وسلاسل الإمداد</p>
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="card-item">
+                <img src="splash3.jpg" alt="Administrative and Back-Office Support">
+                <div class="card-content">
+                    <h4>ADMINISTRATIVE & BACK-OFFICE SUPPORT</h4>
+                    <p>Professional clerical, documentation, and operational administrative assistance.</p>
+                    <p class="ar-desc">الدعم الإداري والاعمال المكتبية المساندة</p>
+                </div>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="card-item">
+                <img src="splash3.jpg" alt="Utility and Resource Management">
+                <div class="card-content">
+                    <h4>UTILITY & RESOURCE MANAGEMENT</h4>
+                    <p>Monitoring and management of power, water, and auxiliary resources for efficiency.</p>
+                    <p class="ar-desc">إدارة المرافق والموارد والطاقة</p>
+                </div>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="card-item">
+                <img src="splash3.jpg" alt="General Manpower Supply">
+                <div class="card-content">
+                    <h4>GENERAL MANPOWER & SUPPORT CREW</h4>
+                    <p>Supply of skilled and unskilled support staff for dynamic operational tasks.</p>
+                    <p class="ar-desc">توفير العمالة العامة وطواقم الدعم</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

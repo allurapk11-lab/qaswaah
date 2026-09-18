@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health & Safety Services - Qaswah</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Navigation Bar */
+        .page-header {
+            background-color: #0b2240;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .brand-title {
+            font-size: 20px;
+            font-weight: 800;
+            color: #d4af37;
+            letter-spacing: 1px;
+        }
+
+        .back-btn {
+            background-color: #d4af37;
+            color: #0b2240;
+            padding: 8px 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #ffffff;
+        }
+
+        /* Main Content Container */
+        .content-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        /* Top Title & Banner Section */
+        .service-title-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .title-left h1 {
+            font-size: 28px;
+            color: #0b2240;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .title-left .subtitle-text {
+            font-size: 14px;
+            font-weight: bold;
+            color: #d4af37;
+            letter-spacing: 1px;
+        }
+
+        .title-right {
+            text-align: right;
+        }
+
+        .company-profile-badge {
+            background: #0b2240;
+            color: #d4af37;
+            padding: 6px 15px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        .arabic-sub {
+            font-size: 14px;
+            color: #666;
+            direction: rtl;
+        }
+
+        .service-banner-img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        .intro-text-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+            background: #fdfcf7;
+            padding: 20px;
+            border-left: 4px solid #d4af37;
+            border-radius: 4px;
+        }
+
+        .intro-text-box p {
+            font-size: 14px;
+            color: #444;
+            line-height: 1.7;
+        }
+
+        .intro-text-box .ar-text {
+            direction: rtl;
+            text-align: right;
+            color: #555;
+        }
+
+        /* Section Headings */
+        .section-heading {
+            background: #0b2240;
+            color: #ffffff;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Two Columns Grid for Health & Safety Services */
+        .grid-2col {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .card-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            gap: 15px;
+            transition: transform 0.3s;
+        }
+
+        .card-item:hover {
+            transform: translateY(-3px);
+            border-color: #d4af37;
+        }
+
+        .card-item img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            border-radius: 6px;
+            flex-shrink: 0;
+            background: #f9f9f9;
+            padding: 5px;
+        }
+
+        .card-content h4 {
+            font-size: 13px;
+            color: #0b2240;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .card-content p {
+            font-size: 11px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .card-content .ar-desc {
+            direction: rtl;
+            text-align: right;
+            margin-top: 3px;
+            color: #777;
+        }
+
+        /* Responsive Design */
+        @media(max-width: 992px) {
+            .grid-2col {
+                grid-template-columns: 1fr;
+            }
+            .intro-text-box {
+                grid-template-columns: 1fr;
+            }
+            .service-title-area {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .title-right {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Bar -->
+    <header class="page-header">
+        <div class="brand-title">QASWAH GENERAL CONTRACTING</div>
+        <a href="index.html" class="back-btn">← Back to Services</a>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="content-container">
+        
+        <!-- Top Title & Company Profile Tag -->
+        <div class="service-title-area">
+            <div class="title-left">
+                <h1>HEALTH & SAFETY SERVICES</h1>
+                <div class="subtitle-text">خدمات الصحة والسلامة المهنية</div>
+            </div>
+            <div class="title-right">
+                <span class="company-profile-badge">COMPANY PROFILE / الملف التعريفي</span>
+                <p class="arabic-sub">مؤسسة قسوة للمقاولات العامة</p>
+            </div>
+        </div>
+
+        <!-- Banner Image -->
+        <img src="splash11.jpg" alt="Health and Safety Services" class="service-banner-img">
+
+        <!-- Intro Description Box (English & Arabic) -->
+        <div class="intro-text-box">
+            <p><strong>Overview:</strong> We are committed to maintaining the highest standards of Health, Safety, and Environment (HSE) across all projects. Our comprehensive safety solutions ensure workplace compliance, minimize risks, and protect personnel and assets in compliance with Saudi labor and safety regulations.</p>
+            <p class="ar-text">نلتزم بالحفاظ على أعلى معايير الصحة والسلامة والبيئة في جميع المشاريع. تضمن حلول السلامة الشاملة الخاصة بنا الامتثال في مكان العمل وتقليل المخاطر وحماية الأفراد والأصول بما يتوافق مع أنظمة العمل والسلامة في المملكة العربية السعودية.</p>
+        </div>
+
+        <!-- Section: Our Health & Safety Services -->
+        <div class="section-heading">OUR HEALTH & SAFETY SERVICES / خدماتنا في الصحة والسلامة</div>
+
+        <div class="grid-2col">
+            
+            <!-- Service 1 -->
+            <div class="card-item">
+                <img src="splash79.jpg" alt="HSE Risk Assessment">
+                <div class="card-content">
+                    <h4>HSE RISK ASSESSMENT & AUDITING</h4>
+                    <p>Comprehensive hazard identification, risk evaluation and workplace safety audits.</p>
+                    <p class="ar-desc">تقييم المخاطر وتدقيق الصحة والسلامة والبيئة</p>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="card-item">
+                <img src="splash80.jpg" alt="Safety Training">
+                <div class="card-content">
+                    <h4>SAFETY TRAINING & CERTIFICATION</h4>
+                    <p>Professional training programs for workers and supervisors on industrial safety protocols.</p>
+                    <p class="ar-desc">تدريب الشهادات وبرامج السلامة المهنية</p>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="card-item">
+                <img src="splash81.jpg" alt="PPE Supply">
+                <div class="card-content">
+                    <h4>PPE & SAFETY EQUIPMENT SUPPLY</h4>
+                    <p>Provision of certified personal protective equipment and safety gear for personnel.</p>
+                    <p class="ar-desc">توفير معدات الوقاية الشخصية وأدوات السلامة</p>
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="card-item">
+                <img src="splash82.jpg" alt="Emergency Response">
+                <div class="card-content">
+                    <h4>EMERGENCY RESPONSE & EVACUATION</h4>
+                    <p>Designing emergency preparedness plans, fire safety drills and evacuation procedures.</p>
+                    <p class="ar-desc">خطط الطوارئ والإخلاء والتعامل مع الأزمات</p>
+                </div>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="card-item">
+                <img src="splash83.jpg" alt="Environmental Compliance">
+                <div class="card-content">
+                    <h4>ENVIRONMENTAL COMPLIANCE & MANAGEMENT</h4>
+                    <p>Waste management guidance and compliance checks aligned with local environmental laws.</p>
+                    <p class="ar-desc">الامتثال البيئي وإدارة النفايات</p>
+                </div>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="card-item">
+                <img src="splash84.jpg" alt="Safety Officers Supply">
+                <div class="card-content">
+                    <h4>HSE OFFICERS & SUPERVISORS SUPPLY</h4>
+                    <p>Provision of certified, experienced safety officers for construction and industrial sites.</p>
+                    <p class="ar-desc">توفير مسؤولي ومفتشي السلامة المعتمدين</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

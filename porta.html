@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porta Cabins & Customized Room Solutions - Qaswah</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Navigation Bar */
+        .page-header {
+            background-color: #0b2240;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .brand-title {
+            font-size: 20px;
+            font-weight: 800;
+            color: #d4af37;
+            letter-spacing: 1px;
+        }
+
+        .back-btn {
+            background-color: #d4af37;
+            color: #0b2240;
+            padding: 8px 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #ffffff;
+        }
+
+        /* Main Content Container */
+        .content-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        /* Top Title & Banner Section */
+        .service-title-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .title-left h1 {
+            font-size: 26px;
+            color: #d4af37;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .title-left h2 {
+            font-size: 20px;
+            color: #0b2240;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .tags {
+            font-size: 13px;
+            font-weight: bold;
+            color: #555;
+            letter-spacing: 1px;
+        }
+
+        .title-right {
+            text-align: right;
+        }
+
+        .company-profile-badge {
+            background: #0b2240;
+            color: #d4af37;
+            padding: 6px 15px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        .arabic-sub {
+            font-size: 14px;
+            color: #666;
+            direction: rtl;
+        }
+
+        .service-banner-img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        .intro-text-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+            background: #fdfcf7;
+            padding: 20px;
+            border-left: 4px solid #d4af37;
+            border-radius: 4px;
+        }
+
+        .intro-text-box p {
+            font-size: 14px;
+            color: #444;
+            line-height: 1.7;
+        }
+
+        .intro-text-box .ar-text {
+            direction: rtl;
+            text-align: right;
+            color: #555;
+        }
+
+        /* 5 Key Features Bar */
+        .features-bar {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .feature-item {
+            background: #0b2240;
+            color: white;
+            padding: 15px 10px;
+            border-radius: 8px;
+            text-align: center;
+            border-bottom: 3px solid #d4af37;
+        }
+
+        .feature-item h5 {
+            font-size: 12px;
+            color: #d4af37;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .feature-item p {
+            font-size: 11px;
+            color: #ddd;
+        }
+
+        /* Section Headings */
+        .section-heading {
+            background: #0b2240;
+            color: #ffffff;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Solutions Grid (Left side solutions, Right side types) */
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .solution-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+            transition: transform 0.3s;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-5px);
+            border-color: #d4af37;
+        }
+
+        .solution-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .solution-content {
+            padding: 15px;
+        }
+
+        .solution-content h4 {
+            font-size: 13px;
+            color: #0b2240;
+            font-weight: 800;
+            margin-bottom: 6px;
+        }
+
+        .solution-content p {
+            font-size: 11px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        /* Responsive Design */
+        @media(max-width: 992px) {
+            .features-bar {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .solutions-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .intro-text-box {
+                grid-template-columns: 1fr;
+            }
+            .service-title-area {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .title-right {
+                text-align: left;
+            }
+        }
+
+        @media(max-width: 576px) {
+            .features-bar {
+                grid-template-columns: 1fr;
+            }
+            .solutions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f9f9;
+            color: #121212;
+            padding: 40px 20px;
+        }
+
+        .video-section {
+            max-width: 1200px;
+            margin: 80px auto 0 auto;
+            text-align: center;
+        }
+
+        .video-header {
+            margin-bottom: 30px;
+        }
+
+        .video-header h2 {
+            font-size: 36px;
+            font-weight: 800;
+            color: #0d233a;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+
+        .video-header p {
+            font-size: 15px;
+            color: #555555;
+            font-weight: 500;
+        }
+
+        /* Mobile Size Container Setup */
+        .video-box {
+            position: relative;
+            width: 100%;
+            max-width: 420px; /* Yahan se width mobile jitni kar di gayi hai */
+            height: 520px;     /* Yahan se height adjust ki gayi hai */
+            margin: 0 auto;    /* Center mein align karne ke liye */
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            background: #0d233a;
+            border: 4px solid #0d233a;
+        }
+
+        .video-box video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Video container ke andar poori tarah fit rahegi */
+            display: block;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 500px) {
+            .video-box {
+                max-width: 100%;
+                height: 450px;
+            }
+            .video-header h2 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Bar -->
+    <header class="page-header">
+        <div class="brand-title">QASWAH GENERAL CONTRACTING</div>
+        <a href="index.html" class="back-btn">← Back to Services</a>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="content-container">
+        
+        <!-- Top Title & Company Profile Tag -->
+        <div class="service-title-area">
+            <div class="title-left">
+                <h1>PORTA CABINS &</h1>
+                <h2>CUSTOMIZED ROOM SOLUTIONS</h2>
+                <div class="tags">MANUFACTURING &nbsp;•&nbsp; SUPPLY &nbsp;•&nbsp; INSTALLATION</div>
+            </div>
+            <div class="title-right">
+                <span class="company-profile-badge">COMPANY PROFILE / الملف التعريفي</span>
+                <p class="arabic-sub">مؤسسة قسوة للمقاولات العامة</p>
+            </div>
+        </div>
+
+        <!-- Banner Image -->
+        <img src="splash7.jpg" alt="Porta Cabins Setup" class="service-banner-img">
+
+        <!-- Intro Description Box (English & Arabic) -->
+        <div class="intro-text-box">
+            <p><strong>Overview:</strong> We design, manufacture, and supply high-quality porta cabins and customized rooms for housing camps and a wide range of operational needs across Saudi Arabia.</p>
+            <p class="ar-text">نقوم بتصميم وتصنيع وتوريد الكرفانات وغرف مخصصة عالية الجودة لمعسكرات السكن ومتطلبات التشغيل المختلفة في جميع أنحاء المملكة العربية السعودية.</p>
+        </div>
+
+        <!-- 5 Core Highlights / Features Bar -->
+        <div class="features-bar">
+            <div class="feature-item">
+                <h5>Durable</h5>
+                <p>Weather Resistant<br>متينة ومقاومة للعوامل الجوية</p>
+            </div>
+            <div class="feature-item">
+                <h5>High Quality</h5>
+                <p>Standards<br>معايير جودة عالية</p>
+            </div>
+            <div class="feature-item">
+                <h5>Custom Design</h5>
+                <p>& Build<br>تصميم وتنفيذ حسب الطلب</p>
+            </div>
+            <div class="feature-item">
+                <h5>On-Time</h5>
+                <p>Delivery & Installation<br>توريد وتركيب في الوقت المحدد</p>
+            </div>
+            <div class="feature-item">
+                <h5>Cost Effective</h5>
+                <p>Solutions<br>حلول اقتصادية فعالة</p>
+            </div>
+        </div>
+
+        <!-- Types of Porta Cabins Section -->
+        <div class="section-heading">TYPES OF PORTA CABINS & ROOMS WE MANUFACTURE</div>
+
+        <div class="solutions-grid">
+            
+            <!-- Type 1 -->
+            <div class="solution-card">
+                <img src="splash24.jpg" alt="Single Room Unit">
+                <div class="solution-content">
+                    <h4>SINGLE ROOM UNIT</h4>
+                    <p>وحدة غرفة مفردة مريحة ومتينة لمواقع المشاريع.</p>
+                </div>
+            </div>
+
+            <!-- Type 2 -->
+            <div class="solution-card">
+                <img src="splash25.jpg" alt="Multi Room Unit">
+                <div class="solution-content">
+                    <h4>MULTI ROOM UNIT</h4>
+                    <p>وحدة متعددة الغرف مصممة بكفاءة عالية.</p>
+                </div>
+            </div>
+
+            <!-- Type 3 -->
+            <div class="solution-card">
+                <img src="splash32.jpg" alt="Double Storey Unit">
+                <div class="solution-content">
+                    <h4>DOUBLE STOREY UNIT</h4>
+                    <p>وحدة دورين لتوفير المساحات والاستخدام الأمثل.</p>
+                </div>
+            </div>
+
+            <!-- Type 4 -->
+            <div class="solution-card">
+                <img src="splash33.jpg" alt="Office Cabin">
+                <div class="solution-content">
+                    <h4>OFFICE CABIN</h4>
+                    <p>غرفة مكتب مجهزة بالكامل للأعمال الميدانية.</p>
+                </div>
+            </div>
+
+            <!-- Type 5 -->
+            <div class="solution-card">
+                <img src="splash34.jpg" alt="Portable Toilet">
+                <div class="solution-content">
+                    <h4>PORTABLE TOILET</h4>
+                    <p>دورة مياه متنقلة نظيفة وسهلة الصيانة.</p>
+                </div>
+            </div>
+
+            <!-- Type 6 -->
+            <div class="solution-card">
+                <img src="splash35.jpg" alt="Security Guard Room">
+                <div class="solution-content">
+                    <h4>SECURITY GUARD ROOM</h4>
+                    <p>غرفة حراسة وأمن متينة وآمنة لرجال الأمن.</p>
+                </div>
+            </div>
+
+            <!-- Type 7 -->
+            <div class="solution-card">
+                <img src="splash36.jpg" alt="Mobile Food Cart">
+                <div class="solution-content">
+                    <h4>MOBILE FOOD CART</h4>
+                    <p>عربة ومستلزمات طعام متنقلة للمطاعم والمقاهي.</p>
+                </div>
+            </div>
+
+            <!-- Type 8 -->
+            <div class="solution-card">
+                <img src="splash37.jpg" alt="Storage Room">
+                <div class="solution-content">
+                    <h4>STORAGE ROOM</h4>
+                    <p>غرفة تخزين آمنة ومقاومة للعوامل الخارجية.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+     <section class="video-section">
+        
+        <!-- Section Heading -->
+        <div class="video-header">
+            <h2>Porta cabins</h2>
+        </div>
+
+        <!-- Video Player Box -->
+        <div class="video-box">
+            <video controls autoplay muted loop>
+                <!-- Yahan apni video ka naam ya path likhein (misal ke tor par: 'my-video.mp4') -->
+                <source src="68.mp4" type="video/mp4">
+                Aapka browser video tag ko support nahi karta.
+            </video>
+        </div>
+
+    </section>
+
+
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanical Department - Qaswa</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fdfcfc;
+            color: #080808;
+            padding: 40px 20px;
+        }
+
+        .department-page {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #f7f6f6;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 15px 35px rgb(255, 255, 255);
+            padding: 50px;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 30px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            color: #020202;
+        }
+
+        .dept-header {
+            margin-bottom: 40px;
+        }
+
+        .dept-header h1 {
+            font-size: 32px;
+            font-weight: 800;
+            color: #d4af37;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .dept-header h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #070707;
+        }
+
+        .dept-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .dept-info p {
+            font-size: 14px;
+            color: #0f0f0f;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        /* Services List */
+        .services-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #d4af37;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            border-left: 4px solid #d4af37;
+            padding-left: 12px;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #f5f2f2;
+            padding: 12px 18px;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(250, 246, 246, 0.05);
+            transition: 0.3s;
+        }
+
+        .service-item:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            transform: translateX(5px);
+        }
+
+        .service-item i {
+            color: #d4af37;
+            font-size: 18px;
+            width: 25px;
+            text-align: center;
+        }
+
+        .service-text h4 {
+            font-size: 14px;
+            color: #000000;
+            font-weight: 600;
+        }
+
+        .service-text span {
+            font-size: 12px;
+            color: #060505;
+        }
+
+        /* Right Side Images */
+        .dept-images {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .dept-img-box {
+            height: 220px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .dept-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        @media(max-width: 900px) {
+            .dept-grid {
+                grid-template-columns: 1fr;
+            }
+            .department-page {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="department-page">
+        <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+        
+        <div class="dept-header">
+            <h1>Mechanical Department</h1>
+            <h2>قسم الأعمال الميكانيكية</h2>
+        </div>
+
+        <div class="dept-grid">
+            <!-- Left Info & Services -->
+            <div class="dept-info">
+                <p>
+                    Qaswa General Contracting Establishment has a highly skilled and experienced mechanical team capable of executing a wide range of mechanical works for industrial, commercial and power projects.
+                </p>
+                <p>
+                    We execute projects with strict adherence to international standards, quality requirements, safety regulations and client specifications, ensuring reliable and efficient solutions delivered on time.
+                </p>
+
+                <h3 class="services-title">Our Mechanical Services</h3>
+
+                <div class="service-item">
+                    <i class="fa-solid fa-industry"></i>
+                    <div class="service-text">
+                        <h4>Industrial Mechanical Works</h4>
+                        <span>الأعمال الميكانيكية الصناعية</span>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <i class="fa-solid fa-hammer"></i>
+                    <div class="service-text">
+                        <h4>Steel Fabrication</h4>
+                        <span>تصنيع الهياكل المعدنية</span>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <i class="fa-solid fa-pipe"></i>
+                    <div class="service-text">
+                        <h4>Piping Works</h4>
+                        <span>أعمال الأنابيب</span>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <i class="fa-solid fa-gears"></i>
+                    <div class="service-text">
+                        <h4>Equipment Installation</h4>
+                        <span>تركيب المعدات</span>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <div class="service-text">
+                        <h4>Shutdown & Turnaround Support</h4>
+                        <span>دعم الإيقاف الدوري والصيانة الشاملة</span>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <i class="fa-solid fa-cogs"></i>
+                    <div class="service-text">
+                        <h4>Heavy Mechanical Maintenance</h4>
+                        <span>الصيانة الميكانيكية الثقيلة</span>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <i class="fa-solid fa-building"></i>
+                    <div class="service-text">
+                        <h4>Plant Construction</h4>
+                        <span>إنشاء المشاريع الصناعية</span>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <i class="fa-solid fa-bridge"></i>
+                    <div class="service-text">
+                        <h4>Structural Steel Erection</h4>
+                        <span>تركيب الهياكل الفولاذية</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Images Stack -->
+            <div class="dept-images">
+                <div class="dept-img-box">
+                    <img src="po15.jpg" alt="Mechanical Work 1">
+                </div>
+                <div class="dept-img-box">
+                    <img src="po16.jpg" alt="Mechanical Work 2">
+                </div>
+                <div class="dept-img-box">
+                    <img src="po17.jpg" alt="Mechanical Work 3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

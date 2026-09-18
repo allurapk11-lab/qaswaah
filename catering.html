@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catering Services - Qaswah</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Navigation Bar */
+        .page-header {
+            background-color: #0b2240;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .brand-title {
+            font-size: 20px;
+            font-weight: 800;
+            color: #d4af37;
+            letter-spacing: 1px;
+        }
+
+        .back-btn {
+            background-color: #d4af37;
+            color: #0b2240;
+            padding: 8px 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #ffffff;
+        }
+
+        /* Main Content Container */
+        .content-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        /* Top Title & Banner Section */
+        .service-title-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .title-left h1 {
+            font-size: 28px;
+            color: #0b2240;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .title-left .subtitle-text {
+            font-size: 14px;
+            font-weight: bold;
+            color: #d4af37;
+            letter-spacing: 1px;
+        }
+
+        .title-right {
+            text-align: right;
+        }
+
+        .company-profile-badge {
+            background: #0b2240;
+            color: #d4af37;
+            padding: 6px 15px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        .arabic-sub {
+            font-size: 14px;
+            color: #666;
+            direction: rtl;
+        }
+
+        .service-banner-img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        .intro-text-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+            background: #fdfcf7;
+            padding: 20px;
+            border-left: 4px solid #d4af37;
+            border-radius: 4px;
+        }
+
+        .intro-text-box p {
+            font-size: 14px;
+            color: #444;
+            line-height: 1.7;
+        }
+
+        .intro-text-box .ar-text {
+            direction: rtl;
+            text-align: right;
+            color: #555;
+        }
+
+        /* 5 Key Features Bar */
+        .features-bar {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .feature-item {
+            background: #0b2240;
+            color: white;
+            padding: 15px 10px;
+            border-radius: 8px;
+            text-align: center;
+            border-bottom: 3px solid #d4af37;
+        }
+
+        .feature-item h5 {
+            font-size: 12px;
+            color: #d4af37;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .feature-item p {
+            font-size: 11px;
+            color: #ddd;
+        }
+
+        /* Section Headings */
+        .section-heading {
+            background: #0b2240;
+            color: #ffffff;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Two Columns Grid for Solutions and Meal Types */
+        .grid-2col {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .card-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            gap: 15px;
+            transition: transform 0.3s;
+        }
+
+        .card-item:hover {
+            transform: translateY(-3px);
+            border-color: #d4af37;
+        }
+
+        .card-item img {
+            width: 100px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 6px;
+            flex-shrink: 0;
+        }
+
+        .card-content h4 {
+            font-size: 13px;
+            color: #0b2240;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .card-content p {
+            font-size: 11px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .card-content .ar-desc {
+            direction: rtl;
+            text-align: right;
+            margin-top: 3px;
+            color: #777;
+        }
+
+        /* Responsive Design */
+        @media(max-width: 992px) {
+            .features-bar {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .grid-2col {
+                grid-template-columns: 1fr;
+            }
+            .intro-text-box {
+                grid-template-columns: 1fr;
+            }
+            .service-title-area {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .title-right {
+                text-align: left;
+            }
+        }
+
+        @media(max-width: 576px) {
+            .features-bar {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Bar -->
+    <header class="page-header">
+        <div class="brand-title">QASWAH GENERAL CONTRACTING</div>
+        <a href="index.html" class="back-btn">← Back to Services</a>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="content-container">
+        
+        <!-- Top Title & Company Profile Tag -->
+        <div class="service-title-area">
+            <div class="title-left">
+                <h1>CATERING SERVICES</h1>
+                <div class="subtitle-text">NUTRITIOUS MEALS. EXCELLENT SERVICE.</div>
+            </div>
+            <div class="title-right">
+                <span class="company-profile-badge">COMPANY PROFILE / الملف التعريفي</span>
+                <p class="arabic-sub">مؤسسة قسوة للمقاولات العامة</p>
+            </div>
+        </div>
+
+        <!-- Banner Image -->
+        <img src="splash8.jpg" alt="Catering Services Setup" class="service-banner-img">
+
+        <!-- Intro Description Box (English & Arabic) -->
+        <div class="intro-text-box">
+            <p><strong>Overview:</strong> We provide high-quality, hygienic, and nutritious catering services tailored to the needs of workers camps, hotels, pilgrims groups, events, and banquets. Our commitment to quality, cleanliness, and taste ensures complete satisfaction in every meal we serve.</p>
+            <p class="ar-text">نقدم خدمات تموين عالية الجودة وصحية ومغذية مصممة خصيصاً لتلبية احتياجات معسكرات العمال، الفنادق، مجموعات الحجاج، الفعاليات، والحفلات. نلتزم بالجودة والنظافة والطعم لضمان رضاكم الكامل.</p>
+        </div>
+
+        <!-- 5 Core Highlights / Features Bar -->
+        <div class="features-bar">
+            <div class="feature-item">
+                <h5>Hygienic</h5>
+                <p>& Safe Food<br>طعام صحي وآمن</p>
+            </div>
+            <div class="feature-item">
+                <h5>Nutritious</h5>
+                <p>& Balanced<br>غذاء مغذي ومتوازن</p>
+            </div>
+            <div class="feature-item">
+                <h5>Experienced</h5>
+                <p>Kitchen Team<br>فريق مطبخ ذو خبرة</p>
+            </div>
+            <div class="feature-item">
+                <h5>On-Time</h5>
+                <p>Delivery<br>توصيل في الوقت المحدد</p>
+            </div>
+            <div class="feature-item">
+                <h5>Customized</h5>
+                <p>Menus<br>قوائم طعام مخصصة</p>
+            </div>
+        </div>
+
+        <!-- Section 1: Our Catering Services -->
+        <div class="section-heading">OUR CATERING SERVICES</div>
+
+        <div class="grid-2col">
+            
+            <!-- Service 1 -->
+            <div class="card-item">
+                <img src="splash48.jpg" alt="Workers Camp Catering">
+                <div class="card-content">
+                    <h4>WORKERS CAMP CATERING</h4>
+                    <p>Healthy and filling meals for daily energy and productivity.</p>
+                    <p class="ar-desc">خدمات تموين لمعسكرات العمال - وجبات صحية ومغذية للنظافة والإنتاجية اليومية.</p>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="card-item">
+                <img src="splash38.jpg" alt="Hotel Catering">
+                <div class="card-content">
+                    <h4>HOTEL CATERING</h4>
+                    <p>Delicious meals for guests with professional presentation.</p>
+                    <p class="ar-desc">خدمات تموين للفنادق - وجبات لذيذة للضيوف بتقديم احترافي.</p>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="card-item">
+                <img src="splash39.jpg" alt="Pilgrims Groups Catering">
+                <div class="card-content">
+                    <h4>PILGRIMS GROUPS CATERING</h4>
+                    <p>Nutritious and hygienic meals for Hajj and Umrah groups.</p>
+                    <p class="ar-desc">تموين مجموعات الحجاج - وجبات صحية ومغذية لمجموعات الحج والعمرة.</p>
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="card-item">
+                <img src="splash40.jpg" alt="Events Catering">
+                <div class="card-content">
+                    <h4>EVENTS CATERING</h4>
+                    <p>Quality meals for conferences, gatherings and special events.</p>
+                    <p class="ar-desc">تموين للفعاليات - وجبات عالية الجودة للتجمعات والفعاليات الخاصة.</p>
+                </div>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="card-item" style="grid-column: span 2;">
+                <img src="splash41.jpg" alt="Banquet Catering">
+                <div class="card-content">
+                    <h4>BANQUET CATERING</h4>
+                    <p>Exquisite menus for weddings, banquets and special occasions.</p>
+                    <p class="ar-desc">تموين للحفلات - قوائم فاخرة لأفراح والمناسبات الخاصة.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Section 2: Our Meal Types -->
+        <div class="section-heading">OUR MEAL TYPES</div>
+
+        <div class="grid-2col">
+            
+            <!-- Meal 1 -->
+            <div class="card-item">
+                <img src="splash42.jpg" alt="Arabic Cuisine">
+                <div class="card-content">
+                    <h4>ARABIC CUISINE</h4>
+                    <p>Traditional authentic Arabic dishes prepared with expert care.</p>
+                    <p class="ar-desc">المأكولات العربية الأصيلة والمحضرة بعناية.</p>
+                </div>
+            </div>
+
+            <!-- Meal 2 -->
+            <div class="card-item">
+                <img src="splash43.jpg" alt="International Cuisine">
+                <div class="card-content">
+                    <h4>INTERNATIONAL CUISINE</h4>
+                    <p>Diverse global flavors to satisfy various preferences.</p>
+                    <p class="ar-desc">المأكولات العالمية لتلبية مختلف الأذواق.</p>
+                </div>
+            </div>
+
+            <!-- Meal 3 -->
+            <div class="card-item">
+                <img src="splash44.jpg" alt="Vegetarian Options">
+                <div class="card-content">
+                    <h4>VEGETARIAN OPTIONS</h4>
+                    <p>Fresh, healthy, and wholesome plant-based meals.</p>
+                    <p class="ar-desc">خيارات نباتية صحية وطازجة.</p>
+                </div>
+            </div>
+
+            <!-- Meal 4 -->
+            <div class="card-item">
+                <img src="splash45.jpg" alt="Diet & Special Meals">
+                <div class="card-content">
+                    <h4>DIET & SPECIAL MEALS</h4>
+                    <p>Customized meals tailored for health and dietary needs.</p>
+                    <p class="ar-desc">وجبات خاصة وجمعيان صحية حسب الطلب.</p>
+                </div>
+            </div>
+
+            <!-- Meal 5 -->
+            <div class="card-item">
+                <img src="splash46.jpg" alt="Variety & Freshness">
+                <div class="card-content">
+                    <h4>VARIETY & FRESHNESS</h4>
+                    <p>Wide selection of fresh ingredients and rotating menus.</p>
+                    <p class="ar-desc">تنوع ونضارة في المكونات والقوائم المتجددة.</p>
+                </div>
+            </div>
+
+            <!-- Meal 6 -->
+            <div class="card-item">
+                <img src="splash47.jpg" alt="Hygienic & Safe Preparation">
+                <div class="card-content">
+                    <h4>HYGIENIC & SAFE PREPARATION</h4>
+                    <p>Prepared under strict safety and sanitization protocols.</p>
+                    <p class="ar-desc">تحضير صحي وآمن وفق أعلى معايير النظافة.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

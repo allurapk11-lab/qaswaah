@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civil & Building Construction - Qaswaah</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f9f9;
+            color: #121212;
+            padding: 40px 20px;
+        }
+
+        .civil-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 50px 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eaeaea;
+        }
+
+        /* Header & Back Button */
+        .page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 20px;
+        }
+
+        .back-btn {
+            background-color: #0d233a;
+            color: #ffffff;
+            padding: 8px 18px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: background 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #c5a059;
+            color: #0d233a;
+        }
+
+        /* Title Area */
+        .civil-title h1 {
+            font-size: 32px;
+            font-weight: 800;
+            color: #0d233a;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .civil-title .ar-title {
+            font-family: 'Cairo', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #c5a059;
+            direction: rtl;
+            margin-top: 5px;
+        }
+
+        /* Overview Section with Main Image */
+        .civil-overview {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .civil-overview img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .overview-text p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #444;
+            margin-bottom: 15px;
+        }
+
+        .overview-text .ar-desc {
+            font-family: 'Cairo', sans-serif;
+            direction: rtl;
+            text-align: right;
+            font-size: 15px;
+            color: #555;
+        }
+
+        /* Sub-Services List Header */
+        .sub-heading {
+            background: #0d233a;
+            color: #ffffff;
+            padding: 12px 20px;
+            border-radius: 8px;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            border-left: 4px solid #c5a059;
+        }
+
+        /* Services Bullet Points List */
+        .services-list-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .service-list-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #fdfdfd;
+            border: 1px solid #eaeaea;
+            padding: 12px 18px;
+            border-radius: 8px;
+        }
+
+        .service-list-item i {
+            color: #c5a059;
+            font-size: 16px;
+        }
+
+        .service-list-item div span {
+            display: block;
+            font-size: 13px;
+            font-weight: 700;
+            color: #0d233a;
+        }
+
+        .service-list-item div .ar-sub-text {
+            font-family: 'Cairo', sans-serif;
+            font-size: 12px;
+            color: #666;
+            direction: rtl;
+        }
+
+        /* Gallery Grid (8 Items from Screenshot) */
+        .gallery-title {
+            font-size: 20px;
+            font-weight: 800;
+            color: #0d233a;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-card {
+            background: #fff;
+            border: 1px solid #eaeaea;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+        }
+
+        .gallery-card .card-caption {
+            padding: 12px;
+            text-align: center;
+        }
+
+        .gallery-card .card-caption h4 {
+            font-size: 12px;
+            font-weight: 700;
+            color: #0d233a;
+        }
+
+        .gallery-card .card-caption p {
+            font-family: 'Cairo', sans-serif;
+            font-size: 11px;
+            color: #666;
+            direction: rtl;
+            margin-top: 2px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .civil-overview {
+                grid-template-columns: 1fr;
+            }
+            .services-list-grid {
+                grid-template-columns: 1fr;
+            }
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="civil-container">
+        
+        <!-- Page Header & Back Button -->
+        <div class="page-header">
+            <div class="civil-title">
+                <h1>Civil & Building Construction</h1>
+                <div class="ar-title">أعمال الإنشاءات المدنية والمعمارية</div>
+            </div>
+            <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+        </div>
+
+        <!-- Overview Section -->
+        <div class="civil-overview">
+            <img src="po20.jpg">
+            <div class="overview-text">
+                <p>We undertake a wide range of civil and building construction works with a focus on quality, timely execution and structural durability. Our civil engineering division delivers full spectrum solutions from ground works to finishing, adhering to the highest standards and client specifications.</p>
+                <p class="ar-desc">نقوم بتنفيذ جميع أعمال الإنشاءات المدنية والمعمارية بكفاءة عالية وجودة متميزة، مع الالتزام التام بالمواصفات والمعايير العالمية، لتقديم منشآت متينة وآمنة تلبي متطلبات عملائنا.</p>
+            </div>
+        </div>
+
+        <!-- Section Title Badge -->
+        <div class="sub-heading">
+            <i class="fa-solid fa-helmet-safety"></i> Our Civil Construction Services / خدمات أعمال البناء والإنشاءات
+        </div>
+
+        <!-- Services Bullet Points Grid -->
+        <div class="services-list-grid">
+            <div class="service-list-item">
+                <i class="fa-solid fa-building"></i>
+                <div>
+                    <span>Building Construction</span>
+                    <span class="ar-sub-text">إنشاء المباني</span>
+                </div>
+            </div>
+            <div class="service-list-item">
+                <i class="fa-solid fa-hammer"></i>
+                <div>
+                    <span>Foundation Works</span>
+                    <span class="ar-sub-text">أعمال الأساسات</span>
+                </div>
+            </div>
+            <div class="service-list-item">
+                <i class="fa-solid fa-cubes"></i>
+                <div>
+                    <span>Concrete Works</span>
+                    <span class="ar-sub-text">أعمال الخرسانة</span>
+                </div>
+            </div>
+            <div class="service-list-item">
+                <i class="fa-solid fa-network-wired"></i>
+                <div>
+                    <span>Reinforcement Works</span>
+                    <span class="ar-sub-text">أعمال التسليح</span>
+                </div>
+            </div>
+            <div class="service-list-item">
+                <i class="fa-solid fa-wall"></i>
+                <div>
+                    <span>Masonry Works</span>
+                    <span class="ar-sub-text">أعمال البناء والطوب</span>
+                </div>
+            </div>
+            <div class="service-list-item">
+                <i class="fa-solid fa-paint-roller"></i>
+                <div>
+                    <span>Finishing Works</span>
+                    <span class="ar-sub-text">أعمال التشطيبات</span>
+                </div>
+            </div>
+            <div class="service-list-item">
+                <i class="fa-solid fa-road"></i>
+                <div>
+                    <span>Roads & Pavement Works</span>
+                    <span class="ar-sub-text">أعمال الطرق والأرصفة</span>
+                </div>
+            </div>
+            <div class="service-list-item">
+                <i class="fa-solid fa-water"></i>
+                <div>
+                    <span>Drainage & Sewerage Works</span>
+                    <span class="ar-sub-text">أعمال الصرف الصحي</span>
+                </div>
+            </div>
+            <div class="service-list-item">
+                <i class="fa-solid fa-compass-drafting"></i>
+                <div>
+                    <span>Surveying & Setting Out</span>
+                    <span class="ar-sub-text">أعمال المساحة وتحديد المواقع</span>
+                </div>
+            </div>
+            <div class="service-list-item">
+                <i class="fa-solid fa-clipboard-check"></i>
+                <div>
+                    <span>Site Supervision & Quality Control</span>
+                    <span class="ar-sub-text">الإشراف الميداني وضبط الجودة</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Photo Gallery Grid -->
+        <div class="gallery-title">Project Execution Gallery</div>
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&w=500&q=80" alt="Foundation Excavation">
+                <div class="card-caption">
+                    <h4>Foundation Excavation</h4>
+                    <p>أعمال الحفر للأساسات</p>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=500&q=80" alt="Reinforcement Works">
+                <div class="card-caption">
+                    <h4>Reinforcement Works</h4>
+                    <p>أعمال التسليح</p>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=500&q=80" alt="Concrete Pouring">
+                <div class="card-caption">
+                    <h4>Concrete Pouring</h4>
+                    <p>أعمال صب الخرسانة</p>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="po22.jpg" alt="Masonry Works">
+                <div class="card-caption">
+                    <h4>Masonry Works</h4>
+                    <p>أعمال البناء والطوب</p>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=500&q=80" alt="Finishing Works">
+                <div class="card-caption">
+                    <h4>Finishing Works</h4>
+                    <p>أعمال التشطيبات</p>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=500&q=80" alt="Formwork & Shuttering">
+                <div class="card-caption">
+                    <h4>Formwork & Shuttering</h4>
+                    <p>أعمال القوالب والتدعيم</p>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=500&q=80" alt="Roads & Pavement">
+                <div class="card-caption">
+                    <h4>Roads & Pavements</h4>
+                    <p>أعمال الطرق والأرصفة</p>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="po23.jpg">
+                <div class="card-caption">
+                    <h4>Site Supervision</h4>
+                    <p>الإشراف الميداني</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

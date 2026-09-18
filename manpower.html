@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manpower Supply Services - Qaswah</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Navigation Bar */
+        .page-header {
+            background-color: #0b2240;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .brand-title {
+            font-size: 20px;
+            font-weight: 800;
+            color: #d4af37;
+            letter-spacing: 1px;
+        }
+
+        .back-btn {
+            background-color: #d4af37;
+            color: #0b2240;
+            padding: 8px 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #ffffff;
+        }
+
+        /* Main Content Container */
+        .content-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        /* Top Title & Banner Section */
+        .service-title-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .title-left h1 {
+            font-size: 28px;
+            color: #0b2240;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .title-left .subtitle-text {
+            font-size: 14px;
+            font-weight: bold;
+            color: #d4af37;
+            letter-spacing: 1px;
+        }
+
+        .title-right {
+            text-align: right;
+        }
+
+        .company-profile-badge {
+            background: #0b2240;
+            color: #d4af37;
+            padding: 6px 15px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        .arabic-sub {
+            font-size: 14px;
+            color: #666;
+            direction: rtl;
+        }
+
+        .service-banner-img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        .intro-text-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+            background: #fdfcf7;
+            padding: 20px;
+            border-left: 4px solid #d4af37;
+            border-radius: 4px;
+        }
+
+        .intro-text-box p {
+            font-size: 14px;
+            color: #444;
+            line-height: 1.7;
+        }
+
+        .intro-text-box .ar-text {
+            direction: rtl;
+            text-align: right;
+            color: #555;
+        }
+
+        /* 4 Core Highlights Bar */
+        .features-bar-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .feature-item-4 {
+            background: #0b2240;
+            color: white;
+            padding: 15px 10px;
+            border-radius: 8px;
+            text-align: center;
+            border-bottom: 3px solid #d4af37;
+        }
+
+        .feature-item-4 h5 {
+            font-size: 12px;
+            color: #d4af37;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .feature-item-4 p {
+            font-size: 11px;
+            color: #ddd;
+        }
+
+        /* Section Headings */
+        .section-heading {
+            background: #0b2240;
+            color: #ffffff;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Two Columns Grid for Solutions */
+        .grid-2col {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .card-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            gap: 15px;
+            transition: transform 0.3s;
+        }
+
+        .card-item:hover {
+            transform: translateY(-3px);
+            border-color: #d4af37;
+        }
+
+        .card-item img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            border-radius: 6px;
+            flex-shrink: 0;
+            background: #f9f9f9;
+            padding: 5px;
+        }
+
+        .card-content h4 {
+            font-size: 13px;
+            color: #0b2240;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .card-content p {
+            font-size: 11px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .card-content .ar-desc {
+            direction: rtl;
+            text-align: right;
+            margin-top: 3px;
+            color: #777;
+        }
+
+        /* Industries Grid (6 Items) */
+        .industries-grid-6 {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .industry-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 15px 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+            transition: transform 0.3s;
+        }
+
+        .industry-card:hover {
+            transform: translateY(-3px);
+            border-color: #d4af37;
+        }
+
+        .industry-card img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            margin-bottom: 8px;
+        }
+
+        .industry-card h5 {
+            font-size: 11px;
+            color: #0b2240;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .industry-card p {
+            font-size: 10px;
+            color: #666;
+            direction: rtl;
+        }
+
+        /* Key Features Grid (8 Items) */
+        .features-grid-8 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .feature-card-small {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px 15px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+            transition: transform 0.3s;
+        }
+
+        .feature-card-small:hover {
+            transform: translateY(-3px);
+            border-color: #d4af37;
+        }
+
+        .feature-card-small h5 {
+            font-size: 13px;
+            color: #0b2240;
+            font-weight: 800;
+            margin-bottom: 6px;
+        }
+
+        .feature-card-small p {
+            font-size: 11px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        /* Responsive Design */
+        @media(max-width: 992px) {
+            .features-bar-4 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .industries-grid-6 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .features-grid-8 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .grid-2col {
+                grid-template-columns: 1fr;
+            }
+            .intro-text-box {
+                grid-template-columns: 1fr;
+            }
+            .service-title-area {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .title-right {
+                text-align: left;
+            }
+        }
+
+        @media(max-width: 576px) {
+            .features-bar-4 {
+                grid-template-columns: 1fr;
+            }
+            .industries-grid-6 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .features-grid-8 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Bar -->
+    <header class="page-header">
+        <div class="brand-title">QASWAH GENERAL CONTRACTING</div>
+        <a href="index.html" class="back-btn">← Back to Services</a>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="content-container">
+        
+        <!-- Top Title & Company Profile Tag -->
+        <div class="service-title-area">
+            <div class="title-left">
+                <h1>MANPOWER SUPPLY SERVICES</h1>
+                <div class="subtitle-text">THE RIGHT PEOPLE. THE RIGHT SKILLS. THE RIGHT TIME.</div>
+            </div>
+            <div class="title-right">
+                <span class="company-profile-badge">COMPANY PROFILE / الملف التعريفي</span>
+                <p class="arabic-sub">مؤسسة قسوة للمقاولات العامة</p>
+            </div>
+        </div>
+
+        <!-- Banner Image -->
+        <img src="splash12.jpg" alt="Manpower Supply Team" class="service-banner-img">
+
+        <!-- Intro Description Box (English & Arabic) -->
+        <div class="intro-text-box">
+            <p><strong>Overview:</strong> QASWAH provides reliable and professional manpower supply solutions to help businesses grow and operate efficiently across multiple industries in Saudi Arabia.</p>
+            <p class="ar-text">تقدم قسوة حلول توريد العمالة الموثوقة والمحترفة لمساعدة الشركات على النمو والتشغيل بكفاءة في مختلف القطاعات في المملكة العربية السعودية.</p>
+        </div>
+
+        <!-- 4 Core Highlights / Features Bar -->
+        <div class="features-bar-4">
+            <div class="feature-item-4">
+                <h5>Skilled & Reliable Workforce</h5>
+                <p>عمالة ماهرة وموثوقة</p>
+            </div>
+            <div class="feature-item-4">
+                <h5>Full Compliance & Legal Support</h5>
+                <p>التزام كامل ودعم قانوني</p>
+            </div>
+            <div class="feature-item-4">
+                <h5>Flexible & Scalable Solutions</h5>
+                <p>حلول مرنة وقابلة للتطوير</p>
+            </div>
+            <div class="feature-item-4">
+                <h5>Supporting Your Business Growth</h5>
+                <p>ندعم نمو أعمالك</p>
+            </div>
+        </div>
+
+        <!-- Section 1: Our Manpower Solutions -->
+        <div class="section-heading">OUR MANPOWER SOLUTIONS</div>
+
+        <div class="grid-2col">
+            
+            <!-- Solution 1 -->
+            <div class="card-item">
+                <img src="splash57.jpg" alt="Recruitment Services">
+                <div class="card-content">
+                    <h4>RECRUITMENT SERVICES</h4>
+                    <p>Sourcing, screening & selecting the right candidates for your business needs.</p>
+                    <p class="ar-desc">خدمات التوظيف - البحث والفرز واختيار المرشحين المناسبين لاحتياجات أعمالك.</p>
+                </div>
+            </div>
+
+            <!-- Solution 2 -->
+            <div class="card-item">
+                <img src="splash12.jpg" alt="Manpower Supply">
+                <div class="card-content">
+                    <h4>MANPOWER SUPPLY</h4>
+                    <p>Provision of skilled, semi-skilled & unskilled workers for short term and long-term projects.</p>
+                    <p class="ar-desc">توريد العمالة - توفير عمالة ماهرة، شبه ماهرة وغير ماهرة للمشاريع قصيرة وطويلة الأجل.</p>
+                </div>
+            </div>
+
+            <!-- Solution 3 -->
+            <div class="card-item">
+                <img src="splash58.jpg" alt="Visa & Documentation">
+                <div class="card-content">
+                    <h4>VISA & DOCUMENTATION</h4>
+                    <p>Complete visa processing, documentation & government approvals.</p>
+                    <p class="ar-desc">التأشيرات والمستندات - معالجة كاملة للتأشيرات والمستندات والموافقات الحكومية.</p>
+                </div>
+            </div>
+
+            <!-- Solution 4 -->
+            <div class="card-item">
+                <img src="splash59.jpg" alt="Payroll & Labor Management">
+                <div class="card-content">
+                    <h4>PAYROLL & LABOR MANAGEMENT</h4>
+                    <p>Payroll processing, labor law compliance & employee record management.</p>
+                    <p class="ar-desc">إدارة الرواتب والعمالة - معالجة الرواتب، الالتزام بأنظمة العمل وإدارة سجلات الموظفين.</p>
+                </div>
+            </div>
+
+            <!-- Solution 5 -->
+            <div class="card-item">
+                <img src="splash60.jpg" alt="Accommodation & Transport">
+                <div class="card-content">
+                    <h4>ACCOMMODATION & TRANSPORT</h4>
+                    <p>Housing, transportation & welfare solutions for a productive workforce.</p>
+                    <p class="ar-desc">السكن والمواصلات - توفير السكن والمواصلات وخدمات الرعاية لضمان بيئة عمل منتجة.</p>
+                </div>
+            </div>
+
+            <!-- Solution 6 -->
+            <div class="card-item">
+                <img src="splash61.jpg" alt="Training & Development">
+                <div class="card-content">
+                    <h4>TRAINING & DEVELOPMENT</h4>
+                    <p>On-job training and skill development programs to enhance productivity.</p>
+                    <p class="ar-desc">التدريب والتطوير - برامج تدريب أثناء العمل وتطوير المهارات لرفع مستوى الإنتاجية.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Section 2: We Supply Workforce Across Multiple Industries -->
+        <div class="section-heading">WE SUPPLY WORKFORCE ACROSS MULTIPLE INDUSTRIES</div>
+
+        <div class="industries-grid-6">
+            
+            <div class="industry-card">
+                <img src="splash62.jpg" alt="Construction">
+                <h5>CONSTRUCTION & CIVIL</h5>
+                <p>الإنشاءات والأعمال المدنية</p>
+            </div>
+
+            <div class="industry-card">
+                <img src="splash63.jpg" alt="Facilities">
+                <h5>FACILITIES MANAGEMENT</h5>
+                <p>إدارة المرافق</p>
+            </div>
+
+            <div class="industry-card">
+                <img src="splash65.jpg" alt="Hospitality">
+                <h5>HOSPITALITY & HOTEL</h5>
+                <p>الضيافة والفنادق</p>
+            </div>
+
+            <div class="industry-card">
+                <img src="splash5.jpg" alt="Cleaning">
+                <h5>CLEANING SERVICES</h5>
+                <p>خدمات النظافة</p>
+            </div>
+
+            <div class="industry-card">
+                <img src="splash66.jpg" alt="Industrial">
+                <h5>INDUSTRIAL & WAREHOUSE</h5>
+                <p>الصناعية والستودعات</p>
+            </div>
+
+            <div class="industry-card">
+                <img src="splash67.jpg" alt="Admin">
+                <h5>ADMIN & SUPPORT STAFF</h5>
+                <p>الإدارة والكوادر المساندة</p>
+            </div>
+
+        </div>
+
+        <!-- Section 3: Key Features -->
+        <div class="section-heading">KEY FEATURES</div>
+
+        <div class="features-grid-8">
+            
+            <div class="feature-card-small">
+                <h5>QUALITY ASSURANCE</h5>
+                <p>Rigorous screening and background verification for quality workforce.</p>
+            </div>
+
+            <div class="feature-card-small">
+                <h5>LEGAL COMPLIANCE</h5>
+                <p>100% compliance with Saudi labor laws and regulations.</p>
+            </div>
+
+            <div class="feature-card-small">
+                <h5>TIMELY DEPLOYMENT</h5>
+                <p>Fast mobilization to meet project deadlines.</p>
+            </div>
+
+            <div class="feature-card-small">
+                <h5>RELIABLE PARTNERSHIP</h5>
+                <p>Long-term partnerships built on trust and performance.</p>
+            </div>
+
+            <div class="feature-card-small">
+                <h5>RISK MANAGEMENT</h5>
+                <p>Minimized risks with strong HR policies and procedures.</p>
+            </div>
+
+            <div class="feature-card-small">
+                <h5>EMPLOYEE WELFARE</h5>
+                <p>Focus on well-being and satisfaction of our workforce.</p>
+            </div>
+
+            <div class="feature-card-small">
+                <h5>COST EFFECTIVE</h5>
+                <p>Competitive pricing with transparent and flexible solutions.</p>
+            </div>
+
+            <div class="feature-card-small">
+                <h5>SCALABLE SOLUTIONS</h5>
+                <p>Flexible resources to scale up or down as per your needs.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
